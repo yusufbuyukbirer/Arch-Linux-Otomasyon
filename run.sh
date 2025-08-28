@@ -1,6 +1,6 @@
 #!usr/bin/env bash
 
-aur_packages(
+aur_packages=(
   anytype-bin
   betterbird-bin
   bottles
@@ -35,7 +35,7 @@ aur_packages(
   zen-browser-bin
 )
 
-official_packages(
+official_packages=(
   ananicy-cpp
   blanket
   bleachbit
@@ -73,8 +73,10 @@ official_packages(
 
 echo "AUR Paketleri Yükleniyor..."
 for aur_package in ${aur_packages[@]}; do
-  yay -S --noconfirm
+  yay -S --noconfirm "$aur_package"
+done
 
 echo "Resmi Depolar Yükleniyor..."
 for official__package in ${official_packages[@]}; do
-  sudo pacman -S --noconfirm
+  sudo pacman -S --noconfirm "$aur_package"
+done
