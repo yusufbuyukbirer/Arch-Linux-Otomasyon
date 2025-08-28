@@ -75,6 +75,6 @@ echo "AUR Paketleri Yükleniyor..."
 for aur_package in ${aur_packages[@]}; do
   yay -S --noconfirm
 
-echo "Resim Depolar Yükleniyor..."
+echo "Resmi Depolar Yükleniyor..."
 for official__package in ${official_packages[@]}; do
   sudo pacman -S --noconfirm
